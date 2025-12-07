@@ -362,7 +362,7 @@ function writeText() {
 }
 
 /* AGGIUNTA MAPPA -
-funzione per mostrare mappa con info relative alla location */
+funzione per aggiungere la mappa  */
 function drawMap(lat, lon) {
   let margin = 60;
   let mapW = 320;
@@ -372,9 +372,10 @@ function drawMap(lat, lon) {
   let cornerRadius = 10;
 
   // TESTO: titolo "location"
+  let locationY = mapY - 40; 
   push();
   fill(245, 40, 0); 
-  textSize(20); 
+  textSize(20);
   textStyle(BOLD);
   textAlign(LEFT, TOP);
   text("Location", mapX, locationY);
@@ -429,7 +430,7 @@ function drawMap(lat, lon) {
   // 1. glow esterno (3 livelli per effetto fluo)
   for (let i = 0; i < 3; i++) {
     let size = 35 + i * 15; // raggio crescente
-    let alpha = map(i, 0, 2, 40, 10); // maggiore trasparemza
+    let alpha = map(i, 0, 2, 40, 10); // maggiore trasparenza
     
     fill(255, 100 + i * 20, 0, alpha);
     ellipse(x, y, size, size);
@@ -437,28 +438,26 @@ function drawMap(lat, lon) {
   
   // 2. anello intermedio
   strokeWeight(2);
-  stroke(245, 40, 0); 
+  stroke(245, 40, 0);
   noFill();
   ellipse(x, y, 7, 7);
   
   // 3. nucleo principale
   noStroke();
-  fill(245, 40, 0);
+  fill(245, 40, 0); 
   ellipse(x, y, 6, 6);
   
   // 4. bordo centrale 
-  fill(255, 40, 0);
+  fill(255, 40, 0); 
   ellipse(x, y, 5, 5);
   
   // 5. puntino interno (effetto hot-spot)
-  fill(245, 40, 0); 
+  fill(245, 40, 0);
   ellipse(x, y, 4, 4);
   
   pop();
 }
 
-/* BACK BUTTON -
-funzione per tornare indietro all'index*/
 function drawBackButton() {
   noStroke();
   fill(0);
@@ -467,10 +466,10 @@ function drawBackButton() {
   text("← BACK", 20, 20);
 }
 
-/* NAVIGATORE ANNI -
-funzione per navigare negli anni eruttivi del vulcano selezionato */
+/* BACK BUTTON -
+funzione per tornare indietro all'index */
 function drawYearNavigator(year) {
-  const margin = 60;
+  let margin = 60;
   let y = 230;
   let navigatorX = margin;
   
@@ -482,9 +481,9 @@ function drawYearNavigator(year) {
   textSize(48);
   let rightArrowWidth = textWidth(">");
   
-  // altezze e padding cornice
+  // altezza e padding cornice
   let spaceBetween = 40;
-  let framePadding = 15;
+  let framePadding = 15; 
   let frameHeight = 70; 
   
   textAlign(LEFT, CENTER);
@@ -497,7 +496,7 @@ function drawYearNavigator(year) {
   
   // FRECCIA SINISTRA: cornice
   push();
-  stroke(245, 40, 0); 
+  stroke(245, 40, 0); // Arancione/rosso
   strokeWeight(1);
   noFill();
   rect(leftFrameX, leftFrameY, leftArrowWidth + framePadding*2, frameHeight, 10); // Bordi arrotondati 10px
@@ -525,7 +524,7 @@ function drawYearNavigator(year) {
   let rightFrameX = rightArrowX - framePadding;
   let rightFrameY = y - frameHeight/2;
   
-  // FRECCIA DESTRA: cornice 
+  // FRECCIA DESTRA: cornice
   push();
   stroke(245, 40, 0); 
   strokeWeight(1);
@@ -540,7 +539,6 @@ function drawYearNavigator(year) {
   text(">", rightArrowX, y);
   pop();
 }
-
 /* INTERAZIONI -
 funzione per interazioni e collegamenti */
 function mousePressed() {
