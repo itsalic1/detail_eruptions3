@@ -15,28 +15,28 @@ let worldMap;
 
 function preload() {
   // preload data e mappa
-  data = loadTable("assets/data_impatto.csv", "csv", "header");
-  worldMap = loadImage("assets/path2830.png");
+  data = loadTable("data_impatto.csv", "csv", "header");
+  worldMap = loadImage("worldmap.png");
 
   // preload illustrazioni
-  stratoImg = loadImage("assets/illustrations/stratovolcano.png");
-  calderaImg = loadImage("assets/illustrations/caldera.png");
-  complexImg = loadImage("assets/illustrations/complex_volcano.png");
-  cinderImg = loadImage("assets/illustrations/cinder_cone.png");
-  compoundImg = loadImage("assets/illustrations/compound_volcano.png");
-  craterImg = loadImage("assets/illustrations/crater_rows.png");
-  fissureImg = loadImage("assets/illustrations/fissure_vent.png");
-  lava_coneImg = loadImage("assets/illustrations/lava_cone.png");
-  lava_domeImg = loadImage("assets/illustrations/lava_dome.png");
-  maarImg = loadImage("assets/illustrations/maar.png");
-  pumiceImg = loadImage("assets/illustrations/pumice_cone.png");
-  pyroclastic_coneImg = loadImage("assets/illustrations/pyroclastic_cone.png");
-  pyroclastic_shieldImg = loadImage("assets/illustrations/pyroclastic_shield.png");
-  shieldImg = loadImage("assets/illustrations/shield_volcano.png");
-  subglacialImg = loadImage("assets/illustrations/subglacial_volcano.png");
-  submarineImg = loadImage("assets/illustrations/submarine.png");
-  tuffImg = loadImage("assets/illustrations/tuff_cone.png");
-  volcanic_fieldImg = loadImage("assets/illustrations/volcanic_field.png");
+  stratoImg = loadImage("stratovolcano.png");
+  calderaImg = loadImage("caldera.png");
+  complexImg = loadImage("complex_volcano.png");
+  cinderImg = loadImage("cinder_cone.png");
+  compoundImg = loadImage("compound_volcano.png");
+  craterImg = loadImage("crater_rows.png");
+  fissureImg = loadImage("fissure_vent.png");
+  lava_coneImg = loadImage("lava_cone.png");
+  lava_domeImg = loadImage("lava_dome.png");
+  maarImg = loadImage("maar.png");
+  pumiceImg = loadImage("pumice_cone.png");
+  pyroclastic_coneImg = loadImage("pyroclastic_cone.png");
+  pyroclastic_shieldImg = loadImage("pyroclastic_shield.png");
+  shieldImg = loadImage("shield_volcano.png");
+  subglacialImg = loadImage("subglacial_volcano.png");
+  submarineImg = loadImage("submarine.png");
+  tuffImg = loadImage("tuff_cone.png");
+  volcanic_fieldImg = loadImage("volcanic_field.png");
 }
 
 function setup() {
