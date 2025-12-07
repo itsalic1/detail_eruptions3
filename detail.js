@@ -220,7 +220,7 @@ function drawVolcanoTypeBackground(typeRaw) {
   imageMode(CENTER);
   
   // riduzione opacità!
-  tint(255, 120);
+  tint(255, 100);
   
   let imgWidth = min(1100, width * 0.95);
   let imgHeight = imgWidth * (750/1000);
